@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.5 on win32)" generated="2024-11-15T15:28:01.263853" rpa="false" schemaversion="5">
+<suite id="s1" name="Simple Test V0" source="C:\Users\PCS\Desktop\Github\Testing\tests\simple_test_v0.robot">
+<test id="s1-t1" name="Open Example Website" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-15T15:28:01.433666" level="INFO">Opening browser 'chrome' to base url 'https://example.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-15T15:28:01.433666" elapsed="3.721301"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-15T15:28:05.154967" elapsed="0.044943"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-15T15:28:05.199910" elapsed="2.095469"/>
+</kw>
+<doc>This test case opens the example website.</doc>
+<status status="PASS" start="2024-11-15T15:28:01.432667" elapsed="5.863678"/>
+</test>
+<status status="PASS" start="2024-11-15T15:28:01.264839" elapsed="6.033427"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Simple Test V0">Simple Test V0</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

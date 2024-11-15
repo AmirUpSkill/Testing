@@ -1,0 +1,144 @@
+
+
+Ctrl+K to generate a command
+i have testing workshop with the robot framework with python 11 give me step by step tutor to create python venv in windows and set up the env
+
+To create a Python virtual environment (venv) on Windows and set it up for use with the Robot Framework, follow these step-by-step instructions:
+Step 1: Install Python
+Download Python: Go to the official Python website and download the latest version of Python (make sure to choose a version compatible with Robot Framework).
+Install Python: Run the installer. During installation, make sure to check the box that says "Add Python to PATH".
+Step 2: Open Command Prompt
+Press Win + R, type cmd, and hit Enter to open the Command Prompt.
+Step 3: Create a Virtual Environment
+Navigate to the directory where you want to create your virtual environment. For example:
+2. Create a virtual environment by running:
+This will create a folder named venv in your project directory.
+Step 4: Activate the Virtual Environment
+To activate the virtual environment, run:
+After activation, you should see (venv) at the beginning of your command prompt line, indicating that the virtual environment is active.
+Step 5: Install Robot Framework
+With the virtual environment activated, install Robot Framework using pip:
+Step 6: Verify Installation
+To verify that Robot Framework is installed correctly, run:
+This should display the version of Robot Framework you just installed.
+Step 7: Deactivate the Virtual Environment (Optional)
+When you're done working in the virtual environment, you can deactivate it by simply running:
+Summary
+You have now created a Python virtual environment on Windows, activated it, and installed the Robot Framework. You can start writing your test cases in Robot Framework within this environment. If you need to install additional libraries or dependencies, make sure to do so while the virtual environment is activated
+Ctrl+K to generate a command
+i have testing workshop with the robot framework with python 11 give me step by step tutor to create python venv in windows and set up the env
+
+To create a Python virtual environment (venv) on Windows and set it up for use with the Robot Framework, follow these step-by-step instructions:
+Step 1: Install Python
+Download Python: Go to the official Python website and download the latest version of Python (make sure to choose a version compatible with Robot Framework).
+Install Python: Run the installer. During installation, make sure to check the box that says "Add Python to PATH".
+Step 2: Open Command Prompt
+Press Win + R, type cmd, and hit Enter to open the Command Prompt.
+Step 3: Create a Virtual Environment
+Navigate to the directory where you want to create your virtual environment. For example:
+2. Create a virtual environment by running:
+This will create a folder named venv in your project directory.
+Step 4: Activate the Virtual Environment
+To activate the virtual environment, run:
+After activation, you should see (venv) at the beginning of your command prompt line, indicating that the virtual environment is active.
+Step 5: Install Robot Framework
+With the virtual environment activated, install Robot Framework using pip:
+Step 6: Verify Installation
+To verify that Robot Framework is installed correctly, run:
+This should display the version of Robot Framework you just installed.
+Step 7: Deactivate the Virtual Environment (Optional)
+When you're done working in the virtual environment, you can deactivate it by simply running:
+Summary
+You have now created a Python virtual environment on Windows, activated it, and installed the Robot Framework. You can start writing your test cases in Robot Framework within this environment. If you need to install additional libraries or dependencies, make sure to do so while the virtual environment is activated.
+
+You've successfully set up the Python virtual environment and Robot Framework, great! Now, let's create some simple "proof of connection" test examples to ensure everything works as expected.
+
+Here are three different approaches to verify your setup, focusing on different aspects:
+
+1. Basic Robot Framework Test Case (Keyword-Driven)
+
+Purpose: Checks if Robot Framework can execute a simple keyword and display a message.
+
+Steps:
+
+Create a test file: In your project directory, create a file named simple_test.robot.
+
+Write the test case: Open simple_test.robot in a text editor and add the following code:
+
+*** Settings ***
+Documentation     A simple test to verify Robot Framework setup.
+
+*** Test Cases ***
+Verify Connection
+    Log    Robot Framework is working correctly!
+content_copy
+Use code with caution.
+Robotframework
+
+Run the test: In the command prompt (with the virtual environment activated), navigate to your project directory and run:
+
+robot simple_test.robot
+content_copy
+Use code with caution.
+Bash
+
+Verify Output: You should see output indicating that the test passed, and the message "Robot Framework is working correctly!" should be displayed in the log.
+
+2. Python Library Integration Test
+
+Purpose: Confirms that you can create custom Python libraries and use them within Robot Framework tests.
+
+Steps:
+
+Create a Python library file: In your project directory, create a file named custom_library.py.
+
+Add a simple function: Open custom_library.py and add the following Python code:
+
+def hello_world():
+    return "Hello from Python library!"
+content_copy
+Use code with caution.
+Python
+
+Modify the Robot Framework test: Edit simple_test.robot to import and use the custom library:
+
+*** Settings ***
+Documentation     Testing integration with a Python library.
+Library           custom_library.py
+
+*** Test Cases ***
+Verify Library Integration
+    ${message} =    Hello World
+    Log    ${message}
+content_copy
+Use code with caution.
+Robotframework
+
+Run the test: Execute robot simple_test.robot again.
+
+Verify Output: You should see the message "Hello from Python library!" in the test output, indicating successful integration.
+
+3. System Command Execution Test
+
+Purpose: Checks if Robot Framework can execute system commands (e.g., echo on Windows).
+
+Steps:
+
+Modify the Robot Framework test: Update simple_test.robot to run a system command:
+
+*** Settings ***
+Documentation     Verifying system command execution.
+
+*** Test Cases ***
+Verify System Command
+    ${result} =    OperatingSystem.Run    echo Hello from system!
+    Log    ${result.stdout}
+content_copy
+Use code with caution.
+Robotframework
+
+Run the test: Execute robot simple_test.robot.
+
+Verify Output: You should see "Hello from system!" in the test output, confirming that the command was executed and its output captured.
+
+These three examples demonstrate different ways to verify your Robot Framework and Python environment setup. Each test case focuses on a different aspect: basic keyword execution, Python library integration, and system command execution. By successfully running these tests, you gain confidence that your environment is properly configured for your testing workshop.
